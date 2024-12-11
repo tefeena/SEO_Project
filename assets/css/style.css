@@ -191,9 +191,9 @@ body {
     50% { transform: translateY(-10px); }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1450px) {
     .hero {
-        height: 60vh;
+        height: 100%;
         padding: 15px;
     }
 
@@ -218,7 +218,7 @@ body {
 
 @media screen and (max-width: 480px) {
     .hero {
-        height: 70vh;
+        height: 100%;
         padding: 10px;
     }
 
