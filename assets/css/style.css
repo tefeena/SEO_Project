@@ -46,6 +46,7 @@ body {
     list-style: none;
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .nav-links li a {
@@ -64,14 +65,23 @@ body {
     color: white;
 }
 
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    color: #F28482;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
     .navbar {
-        flex-wrap: wrap;
         padding: 15px 20px;
+        flex-wrap: wrap;
     }
 
     .nav-links {
-        display: none; 
+        display: none;
         flex-direction: column;
         gap: 10px;
         width: 100%;
@@ -82,7 +92,7 @@ body {
     }
 
     .nav-links.active {
-        display: flex; 
+        display: flex;
     }
 
     .nav-links li a {
@@ -92,11 +102,6 @@ body {
 
     .hamburger {
         display: block;
-        font-size: 1.5rem;
-        color: #F28482;
-        background: none;
-        border: none;
-        cursor: pointer;
     }
 }
 
@@ -104,6 +109,14 @@ body {
     .hamburger {
         display: none;
     }
+}
+
+.nav-links {
+    transition: transform 0.3s ease;
+}
+
+.nav-links.active {
+    transform: translateX(0);
 }
 
 
@@ -118,7 +131,7 @@ body {
     background: linear-gradient(rgba(245, 202, 195, 0.8), rgba(132, 165, 157, 0.8)), url('/assets/images/hero-image.jpeg') no-repeat center/cover;
     color: #333;
     background-position: center;
-    background-size: contain;
+    background-size: cover; /* Changed to cover for better responsiveness */
     animation: fadeIn 1.5s ease-in-out;
     position: relative;
 }
@@ -129,16 +142,20 @@ body {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 3rem; 
     font-weight: bold;
     color: #003566;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px; 
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-top: 20px;
+    font-size: 1.1rem; 
+    margin-top: 10px;
     color: #333;
+    max-width: 80%; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero .cta-btn {
@@ -174,8 +191,6 @@ body {
     50% { transform: translateY(-10px); }
 }
 
-
-/* Responsive Hero Section */
 @media screen and (max-width: 768px) {
     .hero {
         height: 60vh;
@@ -183,7 +198,7 @@ body {
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem; 
     }
 
     .hero p {
@@ -208,7 +223,7 @@ body {
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem; 
     }
 
     .hero p {
@@ -225,6 +240,7 @@ body {
         font-size: 0.8rem;
     }
 }
+
 
 
 /* Services Section */
