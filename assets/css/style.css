@@ -1116,6 +1116,8 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     transition: background 0.3s;
+    text-decoration: none;
+    margin-top: 10px;
 }
 
 .btn-primary:hover {
