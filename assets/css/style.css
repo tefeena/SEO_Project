@@ -128,7 +128,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: linear-gradient(rgba(245, 202, 195, 0.8), rgba(132, 165, 157, 0.8)), url('/assets/images/hero-image.jpeg') no-repeat center/cover;
+    background: linear-gradient(rgba(245, 202, 195, 0.8), rgba(132, 165, 157, 0.8)), url('./assets/images/hero-image.jpeg') no-repeat center/cover;
     color: #333;
     background-position: center;
     background-size: cover; /* Changed to cover for better responsiveness */
